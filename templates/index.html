@@ -1,9 +1,30 @@
-{% extends "base.html" %}
-
-{% block title %}Home - My Application{% endblock %}
-
-{% block content %}
-    <h1>Hello, FastAPI!</h1>
-    <p>Welcome to your new FastAPI application, built using our world-class template foundation!</p>
-    <p>Current time: {{ current_time }}</p>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Tone Color Analyzer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Skin Tone Color Analyzer</h1>
+        <div class="upload-section">
+            <input type="file" id="imageUpload" accept="image/*">
+            <button onclick="uploadImage()">Analyze Skin Tone</button>
+        </div>
+        <div id="results" class="results-section"></div>
+        <div class="change-tone-section">
+            <h2>Change Skin Tone</h2>
+            <select id="newTone">
+                <option value="light">Light</option>
+                <option value="medium">Medium</option>
+                <option value="dark">Dark</option>
+            </select>
+            <button onclick="changeSkinTone()">Change Tone</button>
+        </div>
+        <div id="changedImage" class="changed-image-section"></div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
